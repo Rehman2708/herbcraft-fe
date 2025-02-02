@@ -1,0 +1,63 @@
+@import "../../styles/global.scss";
+
+.cartContainer {
+  align-items: flex-start !important;
+  overflow-y: hidden;
+  background-color: var(--primaryOpacity);
+  height: calc(100vh - 60px);
+
+  .cartLeftContainer {
+    width: calc(100vw - 400px);
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
+  }
+  .cartRightContainer {
+    width: 400px;
+    height: calc(100vh - 100px);
+    margin: 16px;
+    position: relative;
+
+    .cardRightWrapper {
+      box-shadow: 0px 0px 10px var(--border);
+      background-color: var(--white);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      .priceHeading {
+        padding: 12px;
+        border-bottom: 1px solid var(--border);
+      }
+      .priceRow {
+        margin: 16px;
+      }
+      .totalAmountRow {
+        border-top: 1px dashed var(--border);
+        border-bottom: 1px dashed var(--border);
+        padding: 16px 0;
+      }
+      .overLineText {
+        color: var(--grey);
+        text-decoration: line-through;
+      }
+      .savingText {
+        color: var(--success);
+      }
+      .pendingText {
+        color: #ffc800;
+      }
+    }
+    .safePaymentContainer {
+      color: var(--grey);
+      margin-left: 32px;
+      .safePaymentText {
+        width: 60%;
+      }
+    }
+    .orderButton {
+      height: auto;
+      // position: absolute;
+      // bottom: 0;
+      width: 100%;
+      margin-bottom: 10vh;
+    }
+  }
+}

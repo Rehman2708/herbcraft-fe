@@ -1,0 +1,45 @@
+@import "../../styles/global.scss";
+.container {
+  position: sticky;
+  top: 0;
+  width: calc(100% - 32px);
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--white90);
+  backdrop-filter: blur(35px);
+  z-index: 100;
+  .headerText {
+    margin: 0;
+  }
+  .tab {
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: $sFont;
+  }
+  .active {
+    background-color: var(--primary);
+  }
+  .logoutText {
+    color: var(--error);
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding: 18px 16px;
+    margin-top: 8px;
+  }
+  .detailContainer {
+    padding: 8px 80px 0 16px;
+  }
+}
+.headerMenu {
+  border-radius: 6px;
+  padding: 0;
+  background-color: var(--white);
+  box-shadow: 0px 0px 10px var(--border);
+}
+.avatar {
+  height: 30px;
+  width: 30px;
+}
+.menuButton {
+}

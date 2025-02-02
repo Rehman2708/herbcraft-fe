@@ -1,0 +1,148 @@
+button,
+label,
+input,
+select,
+textarea,
+body {
+  // font-family: "Mulish", serif !important;
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--text);
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.justifyStart {
+  justify-content: flex-start;
+}
+.justifyEnd {
+  justify-content: flex-end;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+.gap {
+  gap: 20px;
+}
+.smallGap {
+  gap: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.fullWidth {
+  width: 100%;
+}
+//  Colors
+:root {
+  // --primary: #000000;
+  --primary: #dbbc3f;
+  --primaryOpacity: #dbbc3f70;
+  --secondary: #837f28;
+  --tertiary: #144524;
+  --text: #212121dc1;
+  --white: #fff;
+  --border: #dde2e4;
+  --error: #e64646;
+  --success: #28831a;
+  --grey: rgba(128, 128, 128, 0.922);
+}
+
+// Font sizes
+
+$xxsFont: 0.65rem;
+$xsFont: 0.75rem;
+$msFont: 0.875rem;
+$sFont: 1rem;
+$mmFont: 1.125rem;
+$mFont: 1.25rem;
+$lFont: 1.5rem;
+$xlFont: 1.75rem;
+$xxlFont: 2rem;
+
+.topLabel {
+  font-size: $msFont;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.inputField {
+  border-radius: 6px;
+  padding: 11px;
+  border: 1px solid var(--border);
+  font-size: $msFont;
+  font-weight: 600;
+  width: calc(100% - 22px);
+  margin-bottom: 12px;
+  resize: none;
+  &::placeholder {
+    color: var(--primary);
+  }
+}
+
+// buttons
+
+.successButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--tertiary);
+  background-color: var(--tertiary);
+  padding: 10px;
+  color: var(--white);
+  border-radius: 6px;
+  font-size: $sFont;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--border);
+    border-color: var(--border);
+    color: var(--secondary);
+  }
+  width: 100%;
+}
+.errorButton {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--tertiary);
+}
+.secondaryButton {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+  color: var(--white);
+}
+
+// scrollbar
+
+::-webkit-scrollbar {
+  // width: 0;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}

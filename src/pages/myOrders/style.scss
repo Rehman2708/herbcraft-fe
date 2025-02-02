@@ -1,0 +1,49 @@
+@import "../../styles/global.scss";
+
+.ordersCard {
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px var(--border);
+  margin: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all ease 0.2s;
+  &:hover {
+    scale: 1.01;
+  }
+  .orderImage {
+    height: 120px;
+  }
+  .titleHead {
+    color: var(--grey);
+    font-size: $msFont;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+  .addressText {
+    display: flex;
+    gap: 10px;
+  }
+  .productLength {
+    color: var(--secondary);
+  }
+  .deliveryDate {
+    color: var(--success);
+    font-size: $mFont;
+  }
+  .orderDate {
+    color: var(--error);
+  }
+  .statusText {
+    color: #ffbf00;
+  }
+  .priceText {
+    font-size: $mmFont;
+    color: var(--tertiary);
+  }
+  .orderId {
+    font-size: $msFont;
+    color: var(--grey);
+  }
+}

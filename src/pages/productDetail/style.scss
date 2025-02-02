@@ -1,0 +1,72 @@
+@import "../../styles/global.scss";
+.productDetailWrapper {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+
+  .productDetailLeft {
+    width: 40%;
+    height: calc(100lvh - 100px);
+    padding: 16px 0 16px 16px;
+    position: relative;
+
+    .productImage {
+      width: 100%;
+      object-fit: contain;
+      margin-bottom: 16px;
+      height: calc(100% - 100px);
+    }
+    .deleteProduct {
+      background-color: var(--error);
+      height: 50px;
+      width: 50px;
+      border-radius: 100px;
+      font-size: 20px;
+      color: var(--white);
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+  .productDetailText {
+    overflow-y: scroll;
+    max-height: calc(100vh - 100px);
+    padding: 16px;
+    width: 60%;
+    .pageRoute {
+      color: var(--grey);
+      font-size: $msFont;
+      margin-bottom: 16px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .productName {
+      font-size: $lFont;
+    }
+    .productCategory {
+      margin: 6px 0;
+    }
+    .productIngredients {
+    }
+    .productPrice {
+      font-size: $xlFont;
+      font-weight: 500;
+      align-items: baseline;
+      margin: 6px 0;
+    }
+    .productMRP {
+      font-size: $sFont;
+      text-decoration: line-through;
+      color: var(--grey);
+      margin: 10px 0;
+    }
+    .productDiscount {
+      font-size: $sFont;
+      color: var(--success);
+    }
+    .productDescription {
+      color: var(--grey);
+    }
+  }
+}

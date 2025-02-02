@@ -1,0 +1,63 @@
+@import "../../styles/global.scss";
+
+.checkoutContainer {
+  width: 60vw;
+  padding-bottom: 100px;
+  .count {
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    background-color: var(--primaryOpacity);
+    color: var(--tertiary);
+  }
+  .line {
+    height: 3px;
+    width: 200px;
+    background-color: var(--primaryOpacity);
+  }
+  .filledLine {
+    background-color: var(--tertiary);
+    color: var(--white);
+  }
+  .stepsContainer {
+    padding: 16px;
+  }
+  .formHead {
+    margin-bottom: 16px;
+  }
+  .dataRow {
+    margin: 16px 0;
+    font-size: $mFont;
+    box-shadow: 0 0 10px var(--border);
+    border-radius: 6px;
+    padding: 16px;
+    .dataHead {
+      font-size: $sFont;
+      margin-right: 10px;
+      color: var(--grey);
+      font-weight: 300;
+    }
+  }
+  .priceRow {
+    color: var(--success);
+    font-weight: 500;
+  }
+  .dateRow {
+    color: var(--error);
+    font-weight: 500;
+  }
+  .addressRow {
+    display: flex;
+  }
+  .paymentContainer {
+    .optionHead {
+      margin-bottom: 16px;
+    }
+  }
+}
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}

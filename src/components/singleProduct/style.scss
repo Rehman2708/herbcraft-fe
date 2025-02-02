@@ -1,0 +1,76 @@
+@import "../../styles/global.scss";
+
+.singleCard {
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 00px 0px 10px #00000030;
+  margin: 10px;
+  transition: all ease 0.2s;
+  height: calc(100% - 40px);
+  background-color: var(--white);
+  &:hover {
+    scale: 1.03;
+  }
+  .prodImage {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .productName {
+    font-size: $mmFont;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .productCategory {
+    margin: 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: $msFont;
+  }
+  .productIngredients {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .productPrice {
+    font-size: $mFont;
+    font-weight: 500;
+    align-items: baseline;
+  }
+  .productMRP {
+    font-size: $msFont;
+    text-decoration: line-through;
+    color: var(--grey);
+    margin: 6px 0;
+  }
+  .productDiscount {
+    font-size: $msFont;
+    color: var(--success);
+  }
+  .productDescription {
+    color: var(--grey);
+  }
+  .cartQuantity {
+    margin-bottom: 6px;
+  }
+}
+.cartCard {
+  display: grid;
+  grid-template-columns: 200px calc(100% - 210px);
+  height: fit-content;
+  gap: 10px;
+  &:hover {
+    scale: 1.01;
+  }
+  .prodImage {
+    height: 140px;
+    width: 200px;
+  }
+  .noButProdImg {
+    height: 100px;
+  }
+}

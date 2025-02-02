@@ -1,0 +1,13 @@
+@import "../../styles/global.scss";
+
+.fullText {
+  display: flex;
+  font-size: $lFont;
+  font-family: "Yellowtail", serif;
+  .leftText {
+    color: var(--secondary);
+  }
+  .rightText {
+    color: var(--tertiary);
+  }
+}

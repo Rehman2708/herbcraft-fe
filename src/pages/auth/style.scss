@@ -1,0 +1,21 @@
+.authContainer {
+  display: flex;
+  .leftDiv {
+    background-color: var(--primary);
+    height: 100lvh;
+    width: 50vw;
+    .logoImg {
+      height: 300px;
+      width: 70%;
+    }
+  }
+  .rightDiv {
+    overflow: hidden;
+    width: 30vw;
+    padding: 0 10vw;
+    text-align: center;
+    .bottomText {
+      padding: 20px;
+    }
+  }
+}
