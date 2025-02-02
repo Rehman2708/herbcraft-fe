@@ -14,7 +14,7 @@ const Address = ({
 }) => {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setAddress((prev) => ({ ...prev, [name]: value }));
+    setAddress({ ...address, [name]: value });
   };
   const handleNext = () => {
     if (

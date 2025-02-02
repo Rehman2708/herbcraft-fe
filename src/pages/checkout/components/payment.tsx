@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Payment = ({
-  setStep,
   setPaymentMethod,
   createOrder,
 }: {
-  setStep: (step: number) => void;
   setPaymentMethod: (method: string) => void;
   createOrder: () => void;
 }) => {

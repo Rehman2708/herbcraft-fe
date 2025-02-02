@@ -2,9 +2,7 @@ import { HttpMethods } from "../../enums/httpMethods";
 import { getDataFromAsynStorage } from "./localStorage";
 import { AppExceptions } from "./appExceptions";
 import { LocalStorageKey } from "../../enums/localStroage";
-interface ErrorObject {
-  message: string;
-}
+
 type HttpMethod =
   | HttpMethods.GET
   | HttpMethods.POST

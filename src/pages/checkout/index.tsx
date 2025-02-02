@@ -9,6 +9,7 @@ import Payment from "./components/payment";
 import { OrdersRepo } from "../../repositories/orders";
 import toast from "react-hot-toast";
 import OrderPlaced from "./components/orderPlaced";
+import { IAddress } from "../../utils/types/checkout";
 
 enum Tabs {
   Delivery = "Delivery address",
@@ -20,9 +21,9 @@ const Checkout = () => {
   const location = useLocation();
   const { user } = useAuthViewModal();
   const { totalPrice, products, totalItems } = location.state || {};
-  const [address, setAddress] = useState({
+  const [address, setAddress] = useState<IAddress>({
     name: "",
-    phoneNumber: "",
+    phoneNumber: 0,
     lane1: "",
     lane2: "",
     city: "",
@@ -67,7 +68,7 @@ const Checkout = () => {
           <div className="checkoutContainer">
             <div className="center stepsContainer">
               {steps.map((item, index) => (
-                <div key={index} className="center">
+                <div key={`${item}-${index}`} className="center">
                   {index < steps.length - 1 && (
                     <h1
                       className={`count center ${
@@ -102,7 +103,6 @@ const Checkout = () => {
             )}
             {step === 3 && (
               <Payment
-                setStep={setStep}
                 setPaymentMethod={setPaymentMethod}
                 createOrder={createOrder}
               />

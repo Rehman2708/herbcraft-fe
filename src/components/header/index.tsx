@@ -6,7 +6,11 @@ import { Link, useLocation } from "react-router-dom";
 import { AiOutlineLogout } from "react-icons/ai";
 import { Menu } from "@szhsin/react-menu";
 import avatar from "../../assets/images/Avatar.svg";
-const Header = ({ onInputChange }: { onInputChange?: (e) => void }) => {
+const Header = ({
+  onInputChange,
+}: {
+  onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) => {
   const { handleLogout } = useAuthViewModal();
   const location = useLocation();
   const { user } = useAuthViewModal();
