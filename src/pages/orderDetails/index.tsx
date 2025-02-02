@@ -48,6 +48,7 @@ const OrderDetails = () => {
                   cart
                   cartQuantity={product.quantity}
                   hideButtons
+                  isDetail
                 />
               </div>
             ))}

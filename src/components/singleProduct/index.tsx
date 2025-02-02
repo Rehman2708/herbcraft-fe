@@ -17,11 +17,13 @@ const SingleProduct = ({
   cart,
   cartQuantity,
   hideButtons,
+  isDetail,
 }: {
   product: IProduct;
   cart?: boolean;
   cartQuantity?: number;
   hideButtons?: boolean;
+  isDetail?: boolean;
 }) => {
   const { addToCart, removeFromCart, updateCartProduct } = useCartViewModal();
   const [quantity, setQuantity] = useState(1);
@@ -51,44 +53,50 @@ const SingleProduct = ({
       <div>
         <p className="productName">{product?.name}</p>
         <p className="productCategory">{product?.category}</p>
-        <p className="center smallGap justifyStart productPrice">
+        <div className="center smallGap justifyStart productPrice">
           ₹{product?.discount ? product.discountedPrice : product?.price}
           <p className="productMRP">₹{product?.price}</p>
           <p className="productDiscount">
             {product?.discount ? ` ${product.discount}% off` : ""}
           </p>
-        </p>
+        </div>
         {cart && (
           <>
             <div className="center justifyStart smallGap cartQuantity">
               Quantity:
-              <button
-                disabled={addedCartQuantity === 1}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (addedCartQuantity) {
-                    setAddedCartQuantity(addedCartQuantity - 1);
-                    updateCartProduct(product._id, addedCartQuantity - 1);
-                  }
-                }}
-                className="secondaryButton center pointer"
-              >
-                <AiOutlineMinus />
-              </button>
+              {!isDetail ? (
+                <button
+                  disabled={addedCartQuantity === 1}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (addedCartQuantity) {
+                      setAddedCartQuantity(addedCartQuantity - 1);
+                      updateCartProduct(product._id, addedCartQuantity - 1);
+                    }
+                  }}
+                  className="secondaryButton center pointer"
+                >
+                  <AiOutlineMinus />
+                </button>
+              ) : (
+                " "
+              )}
               {addedCartQuantity}
-              <button
-                disabled={addedCartQuantity === 10}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (addedCartQuantity) {
-                    setAddedCartQuantity(addedCartQuantity + 1);
-                    updateCartProduct(product._id, addedCartQuantity + 1);
-                  }
-                }}
-                className="secondaryButton center pointer"
-              >
-                <AiOutlinePlus />
-              </button>
+              {!isDetail && (
+                <button
+                  disabled={addedCartQuantity === 10}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (addedCartQuantity) {
+                      setAddedCartQuantity(addedCartQuantity + 1);
+                      updateCartProduct(product._id, addedCartQuantity + 1);
+                    }
+                  }}
+                  className="secondaryButton center pointer"
+                >
+                  <AiOutlinePlus />
+                </button>
+              )}
             </div>
           </>
         )}

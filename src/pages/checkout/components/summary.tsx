@@ -24,7 +24,7 @@ const Summary = ({
         <span className="dataHead">Price: </span>₹{totalPrice}
       </p>
       <div className="center spaceBetween dataRow">
-        <p className="addressRow ">
+        <div className="addressRow ">
           <span className="dataHead">Deliver to: </span>
           <span>
             <p>{address.name},</p>
@@ -35,7 +35,7 @@ const Summary = ({
             <p>{address.postalCode}</p>
             <p>+91 {address.phoneNumber}</p>
           </span>
-        </p>
+        </div>
         <p onClick={() => setStep(1)} className="dateRow pointer">
           Edit
         </p>
